@@ -18,8 +18,8 @@ export const heroContent = {
     displayDate: 'Sep 27, 2026',
     displayTime: '1:00–4:00 PM',
     timeZone: 'Eastern Time',
-    // September 27, 2026 at 1:00 PM in Toronto is 17:00 UTC (EDT).
-    countdownUtc: '2026-09-27T17:00:00Z',
+    // October 25, 2026 at 4:00 PM in Toronto is 16:00 UTC (EDT).
+    countdownUtc: '2026-10-25T16:00:00Z',
   },
 };
 
