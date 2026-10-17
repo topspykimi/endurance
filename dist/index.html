@@ -9,11 +9,13 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/hero.webp" as="image" type="image/webp">
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <!-- ES modules keep editable content, section templates, and behavior separate. -->
+  <script type="module" src="scripts/main.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- Global navigation remains in the page shell because it changes infrequently. -->
   <header class="site-header" data-header>
     <a class="brand" href="#top" aria-label="2 Hours Endurance Race home">
       <span class="brand-mark" aria-hidden="true"><b>2</b>H</span>
@@ -32,106 +34,10 @@
   </header>
 
   <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-media" role="img" aria-label="Rental karts racing in an Ontario endurance event"></div>
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="hero-slash" aria-hidden="true"></div>
-      <div class="hero-content">
-        <p class="eyebrow"><span></span>Arrive &amp; Drive · Ontario</p>
-        <h1 id="hero-title" class="hero-title" aria-label="Two hours. One team. No excuses.">
-          <span class="typed-words" aria-hidden="true" data-typewriter></span><span class="type-cursor" aria-hidden="true"></span>
-        </h1>
-        <div class="event-strip reveal">
-          <div class="event-location">
-            <span class="meta-label">Next Race</span>
-            <strong>Hamilton</strong>
-          </div>
-          <div>
-            <span class="meta-label">Date</span>
-            <strong>Sep 27, 2026</strong>
-          </div>
-          <div>
-            <span class="meta-label">Start</span>
-            <strong>1:00–4:00 PM</strong>
-            <small>Eastern Time</small>
-          </div>
-        </div>
-      </div>
-
-      <div class="countdown-wrap reveal" aria-label="Countdown to Hamilton race">
-        <span class="countdown-label">Lights out in</span>
-        <div class="countdown" data-countdown role="timer" aria-live="off">
-          <div><strong data-days>000</strong><span>Days</span></div>
-          <div><strong data-hours>00</strong><span>Hours</span></div>
-          <div><strong data-minutes>00</strong><span>Minutes</span></div>
-          <div><strong data-seconds>00</strong><span>Seconds</span></div>
-        </div>
-      </div>
-
-      <a class="discover" href="#races" aria-label="Discover upcoming races">
-        <span>Discover</span>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v14m0 0 6-6m-6 6-6-6"/></svg>
-      </a>
-    </section>
-
-    <section class="news-section section" id="news" aria-labelledby="news-title">
-      <div class="section-head reveal">
-        <p class="eyebrow dark"><span></span>From the paddock</p>
-        <h2 id="news-title">Latest News</h2>
-        <span class="section-index">01</span>
-      </div>
-      <article class="news-feature reveal">
-        <div class="news-image image-zoom" role="img" aria-label="Endurance kart racing at Mosport"></div>
-        <div class="news-panel">
-          <div class="news-meta"><span>Mosport</span><span>Race Report</span></div>
-          <h3>Luca Helps Seal the Endurance Victory</h3>
-          <p>A decisive team effort, clean stints and relentless pace turned the final laps into a win.</p>
-          <button class="text-link" type="button" data-story aria-expanded="false">
-            <span>Read Story</span><span aria-hidden="true">↗</span>
-          </button>
-          <p class="story-note" data-story-note hidden>Full race reports are coming soon.</p>
-        </div>
-      </article>
-      <div class="section-action reveal">
-        <span class="outline-button" aria-disabled="true">View All <small>Coming Soon</small></span>
-      </div>
-    </section>
-
-    <section class="races-section section" id="races" aria-labelledby="races-title">
-      <div class="race-ghost" aria-hidden="true">Race</div>
-      <div class="section-head light reveal">
-        <p class="eyebrow"><span></span>Calendar 2026</p>
-        <h2 id="races-title">Upcoming Races</h2>
-        <span class="section-index">02</span>
-      </div>
-      <div class="race-grid">
-        <article class="race-card race-card-featured reveal">
-          <div class="race-image image-zoom" role="img" aria-label="Karts racing side by side"></div>
-          <div class="race-card-body">
-            <div class="race-topline"><span>Endurance</span><strong>Next Race</strong></div>
-            <h3>Hamilton</h3>
-            <dl>
-              <div><dt>Date</dt><dd>September 27, 2026</dd></div>
-              <div><dt>Time</dt><dd>1:00 PM–4:00 PM ET</dd></div>
-              <div><dt>Format</dt><dd>Arrive &amp; Drive</dd></div>
-            </dl>
-            <span class="race-action" aria-disabled="true">Registration link coming soon</span>
-          </div>
-        </article>
-        <article class="race-card race-card-soon reveal">
-          <div class="race-number" aria-hidden="true">02</div>
-          <div class="race-card-body">
-            <div class="race-topline"><span>Sprint</span><strong>Announcing Soon</strong></div>
-            <h3>Audi Group<br>Sprint Race</h3>
-            <dl>
-              <div><dt>Date</dt><dd>To Be Announced</dd></div>
-              <div><dt>Location</dt><dd>To Be Announced</dd></div>
-            </dl>
-            <span class="race-action" aria-disabled="true">Registration link coming soon</span>
-          </div>
-        </article>
-      </div>
-    </section>
+    <!-- These three sections are populated from content/site-content.js. -->
+    <section class="hero" id="top" aria-labelledby="hero-title" data-hero-section></section>
+    <section class="news-section section" id="news" aria-labelledby="news-title" data-news-section></section>
+    <section class="races-section section" id="races" aria-labelledby="races-title" data-races-section></section>
 
     <section class="sponsors-section section" id="sponsors" aria-labelledby="sponsors-title">
       <div class="section-head light reveal">
