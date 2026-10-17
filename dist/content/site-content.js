@@ -10,13 +10,13 @@
 
 export const heroContent = {
   label: 'Arrive & Drive · Ontario',
-  headlineWords: ['Two', 'Hours.', 'One', 'Team.', 'No', 'Excuses.'],
+  headlineWords: ['New', 'Driver.', 'Workshop'],
   image: 'assets/hero.webp',
   imageAlt: 'Rental karts racing in an Ontario endurance event',
   nextEvent: {
-    location: 'Hamilton',
-    displayDate: 'Sep 27, 2026',
-    displayTime: '1:00–4:00 PM',
+    location: 'Mosport',
+    displayDate: 'Oct 25, 2026',
+    displayTime: '4:00–6:00 PM',
     timeZone: 'Eastern Time',
     // October 25, 2026 at 4:00 PM in Toronto is 16:00 UTC (EDT).
     countdownUtc: '2026-10-25T16:00:00Z',
